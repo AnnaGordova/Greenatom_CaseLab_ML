@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  </head>
+  <body style="font-family: Arial, Verdana">
+
+        <h1 style="text-align: center" style =  "margin-bottom: 10px">Оценка отзывов к фильмам</h1>
+        </br>
+    <div class = "container">
+      <div class = "row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+
+          <form action="{% url 'prediction' %}" method="post" style =  "font-size: 20px; padding-bottom: 10px">
+            {% csrf_token %}
+
+              <label style = "font-weight: bold;  display: block; padding-bottom: 5px; font-weight: bold;">
+                <h3 style = " margin-bottom: 20px; font-weight: bold;" >Введите отзыв на английском языке:</h3>
+              </label>
+
+              <input type="text" name="feedback" style="margin-bottom: 20px; padding-bottom: 10px; padding-top: 10px; margin-right: 10px; border: 1px solid #ddd; border-radius: 4px;"/>
+
+
+            <input type="submit" name = "su" value="Получить оценку" style = "margin-bottom: 20px;  border: 2px solid #4682B4; padding-bottom: 10px; padding-top: 10px; color: #fff; background-color: #1E90FF; cursor: pointer;"/>
+          </form >
+          <div class="output" style =  " padding-bottom: 10px">
+            <h3> <label style =  "font-weight: bold; "> Ваш комментарий: </label>  {{settings.your_feedback}} </h3>
+            <h3> <label style =  "font-weight: bold; "> Оценка отзыва: </label> {{settings.category}} </h3>
+            <h3> <label style =  "font-weight: bold; "> Рейтинг (от 1 до 10 баллов): </label> {{settings.star}} </h3>
+            <div style = "margin-bottom: 20px;">
+              {% for x in settings.l_star%}
+                <a href="#" class="image"><img src="{% static 'img/star.ico' %}"></a>
+              {% endfor %}
+              {% for x in settings.g_star%}
+                <a href="#" class="image"><img src="{% static 'img/staroutline.ico' %}"></a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <img src="{% static 'img/robo.jpg' %}" style = "margin-bottom: 20x;">
+        </div>
+
+      </div>
+    </div>
+    </br>
+    <div class = "container">
+      <div class = "row">
+        <label style = " display: block; padding-bottom: 5px; font-weight: bold;">
+          <h3>Решение тестового задания для кандидатов на предстажировку Case Lab ML. Автор решения - Анна Гордова.</h3>
+        </label>
+      </div>
+    </div>
+  </body>
+</html>
