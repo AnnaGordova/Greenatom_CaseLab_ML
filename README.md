@@ -6,6 +6,7 @@
    <li> директория work_wih_model - содержит себе jupyter notebook, в котором производились обучение и настройка модели, и скрипт utils.py</li>
    <li>PDF-файл Greenatom_CaseLab_ML_отчет.pdf - отчет о проделанной работе и оценка метрик точности предсказаний модели.</li>
 </ol>
-![image](https://github.com/user-attachments/assets/3c5d75bf-e813-4fea-939c-f36329d93d7d)
-![image](https://github.com/user-attachments/assets/bd703413-7102-4653-9050-474320c310ab)
-![image](https://github.com/user-attachments/assets/3a38c9b0-37ac-4859-9005-87c27d281692)
+![image](https://github.com/user-attachments/assets/5666ebbc-80c3-49ea-9481-eb4aec05de64)
+![image](https://github.com/user-attachments/assets/36d9c64f-b7b8-442a-a503-60b558dee4f8)
+![image](https://github.com/user-attachments/assets/fde8dc28-d029-4082-abe1-49bbbce21e05)
+
